@@ -1,11 +1,25 @@
 .App {
     --header_height: 60px;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 .hw {
 
 }
 
-.hwTitle {
+.hwFlex {
+    display: flex;
+    flex-direction: column;
+}
 
+hr {
+    margin: 25px 0;
+}
+
+.hwTitle {
+    margin-top: 130px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    line-height: 1.2;
 }
