@@ -51,11 +51,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     // деструктуризация пропсов
     const [name, setName] = useState<string>("");
     const [error, setError] = useState<string>("");
-
+    console.log(name.length);
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
         setName(e.currentTarget.value);
         // need to fix
-        if (name.length) {
+        if (e.currentTarget.value) {
             error && setError("");
         }
     };
