@@ -1,6 +1,5 @@
 .button {
     padding: 5px 24px;
-    background: #0066CC;
     border-radius: 3px;
     color: white;
     outline: none;
@@ -20,6 +19,7 @@
 }
 
 .default {
+    background: #0066CC;
 }
 
 .red {
