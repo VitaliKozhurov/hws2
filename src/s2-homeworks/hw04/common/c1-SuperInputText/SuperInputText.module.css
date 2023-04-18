@@ -2,19 +2,27 @@
 }
 
 .input {
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 .inputWrapper {
 }
 
 .superInput {
+    border: 1px solid #26cc14;
 }
 
 .errorInput {
+    border: 1px solid #CC1439;
 }
 
 .errorInput:focus {
+    border: 3px solid #CC1439;
 }
 
 .error {
+    display: block;
+    color: #CC1439;
 }
