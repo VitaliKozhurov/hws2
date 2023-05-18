@@ -16,7 +16,7 @@ export const homeWorkReducer = (
                 : state.sort((a, b) => b.name.localeCompare(a.name));
         }
         case "check": {
-            return state.filter((student) => student.age >= 18);
+            return state.filter((student) => student.age >= 18).reverse();
             // need to fix
         }
         default:
