@@ -1,16 +1,16 @@
-[data-theme='1'] {
+[data-theme="1"] {
     --color: #000000;
-    --background: #FFFFFF;
+    --background: #ffffff;
 }
 
-[data-theme='2'] {
+[data-theme="2"] {
     --color: #000000;
-    --background: #DDEEFF;
+    --background: #ddeeff;
 }
 
-[data-theme='3'] {
-    --color: #FFFFFF;
-    --background: #212A34;
+[data-theme="3"] {
+    --color: #ffffff;
+    --background: #212a34;
 }
 
 html {
@@ -19,5 +19,7 @@ html {
 }
 
 .select {
-
+    font-size: 24px;
+    margin: 15px 0;
+    height: 40px;
 }
