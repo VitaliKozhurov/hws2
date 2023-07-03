@@ -52,33 +52,33 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+               if(res){
+                   setTechs(res.data.techs)
+                   setTotalCount(res.data.totalCount)
+               }
+               setLoading(false)
                 // сохранить пришедшие данные
-
                 //
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
-        // setPage(
-        // setCount(
-
-        // sendQuery(
-        // setSearchParams(
-
+        setPage(newPage)
+        setCount(newCount)
+        sendQuery({page: newPage, count: newCount})
+        setSearchParams({page: newPage.toString(), count: newCount.toString()})
         //
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
+        console.log(newSort)
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
-
-        // sendQuery(
-        // setSearchParams(
+        sendQuery({page: page, count: count,sort: newSort})
+        setSearchParams({page: page.toString(), count: count.toString(),sort: newSort})
 
         //
     }
@@ -119,12 +119,12 @@ const HW15 = () => {
                 <div className={s.rowHeader}>
                     <div className={s.techHeader}>
                         tech
-                        <SuperSort sort={sort} value={'tech'} onChange={onChangeSort}/>
+                        <SuperSort sort={sort} value={'tech'} onChange={onChangeSort} />
                     </div>
 
                     <div className={s.developerHeader}>
                         developer
-                        <SuperSort sort={sort} value={'developer'} onChange={onChangeSort}/>
+                        <SuperSort sort={sort} value={'developer'} onChange={onChangeSort} />
                     </div>
                 </div>
 
